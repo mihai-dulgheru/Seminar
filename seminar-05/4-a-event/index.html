@@ -6,16 +6,19 @@
             const button = document.getElementById('myBtn');
             const myEvent = new Event('myEvt');
 
-            const clickHandler = () => {
-                // console.log('Butonul a fost apasat.');
-                document.dispatchEvent(myEvent);
-            };
+            // const clickHandler = () => {
+            //     // console.log('Butonul a fost apasat.');
+            //     document.dispatchEvent(myEvent);
+            // };
 
             const myEvtHandler = () => {
                 console.log('Butonul a fost apasat.');
             }
 
-            button.onclick = clickHandler;
+            // button.onclick = clickHandler;
+            button.onclick = () => {
+                document.dispatchEvent(myEvent);
+            }
             document.addEventListener('myEvt', myEvtHandler);
         }
     </script>
