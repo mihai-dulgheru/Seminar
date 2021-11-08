@@ -1,34 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script>
+            window.onload = () => {
+                const log = document.getElementById("log");
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script>
-        window.onload = () => {
-            const log = document.getElementById('log');
+                document.addEventListener("keydown", logKey);
 
-            document.addEventListener('keydown', logKey);
+                function logKey(e) {
+                    log.textContent += ` ${e.code}`;
+                    document.dispatchEvent(event);
+                }
 
-            function logKey(e) {
-                log.textContent += ` ${e.code}`;
-                document.dispatchEvent(event)
-            }
+                const event = new Event("evt");
+                const eventHandler = () => {
+                    log.style.backgroundColor =
+                        "#" + Math.floor(Math.random() * 16777215).toString(16);
+                };
+                document.addEventListener("evt", eventHandler);
+            };
+        </script>
+    </head>
 
-            const event = new Event('evt');
-            const eventHandler = () => {
-                log.style.backgroundColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
-            }
-            document.addEventListener('evt', eventHandler);
-        }
-    </script>
-</head>
-
-<body>
-    <p>Focus the IFrame first (e.g. by clicking in it), then try pressing some keys.</p>
-    <p id="log"></p>
-</body>
-
+    <body>
+        <p>
+            Focus the IFrame first (e.g. by clicking in it), then try pressing
+            some keys.
+        </p>
+        <p id="log"></p>
+    </body>
 </html>

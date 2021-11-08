@@ -1,65 +1,63 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <title></title>
+        <style type="text/css">
+            .container {
+                height: 302px;
+                width: 302px;
+            }
 
-<head>
-    <title></title>
-    <style type="text/css">
-        .container {
-            height: 302px;
-            width: 302px;
-        }
+            .square {
+                height: 100px;
+                width: 100px;
+                background-color: lightgray;
+                float: left;
+            }
 
-        .square {
-            height: 100px;
-            width: 100px;
-            background-color: lightgray;
-            float: left;
-        }
+            .top {
+                border-bottom: 1px solid black;
+            }
 
-        .top {
-            border-bottom: 1px solid black;
-        }
+            .bottom {
+                border-top: 1px solid black;
+            }
 
-        .bottom {
-            border-top: 1px solid black;
-        }
+            .left {
+                border-right: 1px solid black;
+            }
 
-        .left {
-            border-right: 1px solid black;
-        }
+            .right {
+                border-left: 1px solid black;
+            }
 
-        .right {
-            border-left: 1px solid black;
-        }
+            h1 {
+                text-align: center;
+                font-family: Arial, Verdana, sans-serif;
+            }
+        </style>
+    </head>
 
-        h1 {
-            text-align: center;
-            font-family: Arial, Verdana, sans-serif;
-        }
-    </style>
-</head>
-
-<body>
-    <div class="container">
-        <div class="row">
-            <h1>Tic Tac Toe</h1>
+    <body>
+        <div class="container">
+            <div class="row">
+                <h1>Tic Tac Toe</h1>
+            </div>
+            <div class="row">
+                <div class="top left square"></div>
+                <div class="top middle square"></div>
+                <div class="top right square"></div>
+            </div>
+            <div class="row">
+                <div class="middle left square"></div>
+                <div class="middle center square"></div>
+                <div class="middle right square"></div>
+            </div>
+            <div class="row">
+                <div class="bottom left square"></div>
+                <div class="bottom middle square"></div>
+                <div class="bottom right square"></div>
+            </div>
         </div>
-        <div class="row">
-            <div class="top left square"></div>
-            <div class="top middle square"></div>
-            <div class="top right square"></div>
-        </div>
-        <div class="row">
-            <div class="middle left square"></div>
-            <div class="middle center square"></div>
-            <div class="middle right square"></div>
-        </div>
-        <div class="row">
-            <div class="bottom left square"></div>
-            <div class="bottom middle square"></div>
-            <div class="bottom right square"></div>
-        </div>
-    </div>
-</body>
-
+    </body>
 </html>

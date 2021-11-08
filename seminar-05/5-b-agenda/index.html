@@ -1,65 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
-    <style>
-        form {
-            display: grid;
-            width: fit-content;
-            grid-template-columns: 1fr 2fr;
-            row-gap: 10px;
-            column-gap: 10px;
-            padding: 10px;
-        }
-    </style>
-
-    <script>
-        window.onload = () => {
-            const form = document.querySelector('form');
-
-            const formSubmitHandler = (e) => {
-                e.preventDefault();
-                const tbody = document.querySelector('tbody');
-                const tr = document.createElement('tr');
-                let td = document.createElement('td');
-                td.innerHTML = document.querySelector('#nume').value;
-                tr.appendChild(td);
-                td = document.createElement('td');
-                td.innerHTML = document.querySelector('#telefon').value;
-                tr.appendChild(td);
-                tbody.appendChild(tr);
-                document.querySelector('#nume').value = '';
-                document.querySelector('#telefon').value = '';
+        <style>
+            form {
+                display: grid;
+                width: fit-content;
+                grid-template-columns: 1fr 2fr;
+                row-gap: 10px;
+                column-gap: 10px;
+                padding: 10px;
             }
+        </style>
 
-            form.onsubmit = formSubmitHandler;
-        }
-    </script>
-</head>
+        <script>
+            window.onload = () => {
+                const form = document.querySelector("form");
 
-<body>
-    <h1>Agendă</h1>
-    <table>
-        <thead>
-            <tr>
-                <th>Nume</th>
-                <th>Telefon</th>
-            </tr>
-        </thead>
-        <tbody></tbody>
-    </table>
-    <form>
-        <label for="nume">Nume:</label>
-        <input type="text" id="nume" />
-        <label for="telefon">Telefon:</label>
-        <input type="tel" id="telefon" />
-        <button type="submit" id="submitButton">Adaugă contact</button>
-    </form>
-</body>
+                const formSubmitHandler = (e) => {
+                    e.preventDefault();
+                    const tbody = document.querySelector("tbody");
+                    const tr = document.createElement("tr");
+                    let td = document.createElement("td");
+                    td.innerHTML = document.querySelector("#nume").value;
+                    tr.appendChild(td);
+                    td = document.createElement("td");
+                    td.innerHTML = document.querySelector("#telefon").value;
+                    tr.appendChild(td);
+                    tbody.appendChild(tr);
+                    document.querySelector("#nume").value = "";
+                    document.querySelector("#telefon").value = "";
+                };
 
+                form.onsubmit = formSubmitHandler;
+            };
+        </script>
+    </head>
+
+    <body>
+        <h1>Agendă</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nume</th>
+                    <th>Telefon</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <form>
+            <label for="nume">Nume:</label>
+            <input type="text" id="nume" />
+            <label for="telefon">Telefon:</label>
+            <input type="tel" id="telefon" />
+            <button type="submit" id="submitButton">Adaugă contact</button>
+        </form>
+    </body>
 </html>

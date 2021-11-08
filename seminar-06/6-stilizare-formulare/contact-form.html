@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            .container {
+                border-radius: 5px;
+                background-color: #f2f2f2;
+                padding: 20px;
+            }
+
+            input[type="text"],
+            select,
+            textarea {
+                width: 100%;
+                padding: 12px;
+                border: 1px solid #ccc;
+                border-radius: 10px;
+                box-sizing: border-box;
+                margin-top: 6px;
+                margin-bottom: 16px;
+            }
+
+            button {
+                background-color: #04aa6d;
+                color: white;
+                width: auto;
+                border: none;
+                border-radius: 4px;
+                padding: 12px 20px;
+                cursor: pointer;
+            }
+
+            button:hover {
+                /* opacity: 0.8; */
+                background-color: #45a049;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h3>Contact Form</h3>
+        <div class="container">
+            <form action="javascript:void(0);" method="post">
+                <label for="firstname">First Name</label>
+                <input type="text" id="firstname" placeholder="Your name.." />
+
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" placeholder="Your last name.." />
+
+                <label for="country">Country</label>
+                <select name="country" id="country">
+                    <option value="HU" selected>Hungary</option>
+                    <option value="RO">Romania</option>
+                    <option value="UA">Ukraine</option>
+                    <option value="MD">Moldova</option>
+                    <option value="BG">Bulgaria</option>
+                    <option value="RS">Serbia</option>
+                </select>
+
+                <label for="subject">Subject</label>
+                <textarea
+                    name="subject"
+                    id="subject"
+                    placeholder="Write something.."
+                    style="height: 200px"
+                ></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </body>
+</html>

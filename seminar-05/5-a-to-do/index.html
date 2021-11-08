@@ -1,40 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+        <script>
+            window.onload = () => {
+                const form = document.getElementById("form");
 
-    <script>
-        window.onload = () => {
-            const form = document.getElementById('form');
+                const formSubmitHandler = (e) => {
+                    e.preventDefault();
+                    const list = document.getElementById("todo");
+                    const task = document.getElementById("task").value;
 
-            const formSubmitHandler = (e) => {
-                e.preventDefault();
-                const list = document.getElementById('todo');
-                const task = document.getElementById('task').value;
+                    const listItem = document.createElement("li");
+                    listItem.innerHTML = task;
+                    list.appendChild(listItem);
+                    document.getElementById("task").value = "";
+                };
 
-                const listItem = document.createElement('li');
-                listItem.innerHTML = task;
-                list.appendChild(listItem);
-                document.getElementById('task').value = '';
+                form.onsubmit = formSubmitHandler;
             };
+        </script>
+    </head>
 
-            form.onsubmit = formSubmitHandler;
-        };
-    </script>
-</head>
-
-<body>
-    <h1>To do:</h1>
-    <ul id="todo"></ul>
-    <h2>Add new task</h2>
-    <form id="form">
-        <input type="text" id="task" />
-        <button type="submit" id="submitBtn">Add</button>
-    </form>
-</body>
-
+    <body>
+        <h1>To do:</h1>
+        <ul id="todo"></ul>
+        <h2>Add new task</h2>
+        <form id="form">
+            <input type="text" id="task" />
+            <button type="submit" id="submitBtn">Add</button>
+        </form>
+    </body>
 </html>
