@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+        <title>Flex E1</title>
+        <!-- <link rel="stylesheet" href="style.css" /> -->
+        <style>
+            body {
+                margin: 0px;
+                height: 100vh;
+            }
+
+            .container {
+                display: flex;
+                flex-direction: row;
+                padding: 10px;
+                background-color: orange;
+            }
+
+            .column {
+                display: flex;
+                flex-direction: column;
+                padding: 10px;
+                background-color: tomato;
+                flex: 33.33%;
+                height: 500px;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .column-item {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100px;
+                width: 100%;
+            }
+
+            .column-item:hover {
+                background-color: lightblue;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="column">
+                <div class="column-item">Item</div>
+                <div class="column-item">Item</div>
+                <div class="column-item">Item</div>
+            </div>
+            <div class="column">
+                <div class="column-item">Item</div>
+                <div class="column-item">Item</div>
+                <div class="column-item">Item</div>
+            </div>
+            <div class="column">
+                <div class="column-item">Item</div>
+                <div class="column-item">Item</div>
+                <div class="column-item">Item</div>
+            </div>
+        </div>
+    </body>
+</html>
