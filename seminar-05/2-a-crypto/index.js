@@ -1,23 +1,23 @@
-let crypto = require('crypto-js');
+const crypto = require('crypto-js')
 
-let word1 = "word1";
-let word2 = "word2";
+const word1 = 'word1'
+const word2 = 'word2'
 
-let crypt = crypto.AES.encrypt(JSON.stringify(word1), "secret key 123").toString();
+const crypt = crypto.AES.encrypt(JSON.stringify(word1), 'secret key 123').toString()
 
-console.log(crypt);
+console.log(crypt)
 
-let bytes = crypto.AES.decrypt(crypt, "secret key 123");
-let decrypt = JSON.parse(bytes.toString(crypto.enc.Utf8));
+const bytes = crypto.AES.decrypt(crypt, 'secret key 123')
+const decrypt = JSON.parse(bytes.toString(crypto.enc.Utf8))
 
-console.log(decrypt);
+console.log(decrypt)
 
-const KEY_WORD_2 = 'mysecretkey2';
-let crypt2 = crypto.AES.encrypt(JSON.stringify(word2), KEY_WORD_2).toString();
+const KEY_WORD_2 = 'mysecretkey2'
+const crypt2 = crypto.AES.encrypt(JSON.stringify(word2), KEY_WORD_2).toString()
 
-console.log(crypt2);
+console.log(crypt2)
 
-let bytes2 = crypto.AES.decrypt(crypt2, KEY_WORD_2);
-let decrypt2 = JSON.parse(bytes2.toString(crypto.enc.Utf8));
+const bytes2 = crypto.AES.decrypt(crypt2, KEY_WORD_2)
+const decrypt2 = JSON.parse(bytes2.toString(crypto.enc.Utf8))
 
-console.log(decrypt2);
+console.log(decrypt2)

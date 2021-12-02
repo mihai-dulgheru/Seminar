@@ -1,18 +1,18 @@
-function f(a, b, c) {
-    console.log(a, b, c);
+function f (a, b, c) {
+  console.log(a, b, c)
 }
 
-const params = [1, 'a', true];
+const params = [1, 'a', true]
 
-f(...params);
+f(...params)
 
-const [a, b, c] = params;
+const [a, b, c] = params
 
-console.log(a);
+console.log(a)
 
-const age = 22;
+const age = 22
 
 const o = {
-    age,
-    name: 'jim'
-};
+  age,
+  name: 'jim'
+}
