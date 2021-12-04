@@ -34,7 +34,7 @@ const Employee = sequelize.define(
       }
     }
   }
-  //, {
-  //     tableName: "Employees"
+  // {
+  //   tableName: 'Employees'
   // }
 )

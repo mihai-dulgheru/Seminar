@@ -1,5 +1,3 @@
-// const Employee = require("../models/employee");
-// console.warn(Employee);
 const { Employee } = require('../sequelize').models
 console.warn(Employee)
 const router = require('express').Router()
