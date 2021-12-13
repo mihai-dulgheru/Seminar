@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './UserForm.css'
 
-function UserForm(props) {
+function UserForm (props) {
   const { onAdd } = props
   const [username, setUsername] = useState('')
   const [fullName, setFullName] = useState('')

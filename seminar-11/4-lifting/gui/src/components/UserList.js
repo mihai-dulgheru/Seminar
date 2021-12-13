@@ -6,7 +6,7 @@ import './UserList.css'
 
 const SERVER = 'http://localhost:8080'
 
-function UserList(props) {
+function UserList (props) {
   const [users, setUsers] = useState([])
   const [selected, setSelected] = useState(0)
 
@@ -33,16 +33,18 @@ function UserList(props) {
 
   return (
     <div className='user-list'>
-      {selected !== 0 ? (
-        <UserDetails onCancel={() => setSelected(0)} item={users.find((e) => e.id === selected)} />
-      ) : (
-        <>
-          {users.map((e) => (
-            <User key={e.id} item={e} onSelect={() => setSelected(e.id)} onCancel={() => setSelected(0)} />
-          ))}
-          <UserForm onAdd={addUser} />
-        </>
-      )}
+      {selected !== 0
+        ? (
+          <UserDetails onCancel={() => setSelected(0)} item={users.find((e) => e.id === selected)} />
+          )
+        : (
+          <>
+            {users.map((e) => (
+              <User key={e.id} item={e} onSelect={() => setSelected(e.id)} onCancel={() => setSelected(0)} />
+            ))}
+            <UserForm onAdd={addUser} />
+          </>
+          )}
     </div>
   )
 }
